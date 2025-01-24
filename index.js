@@ -1,7 +1,7 @@
 async function makeIssue() {
     const token = process.env.GH_TOKEN;
     const OWNER = "shienka07";
-    const REPO = "github_power_actions";
+    const REPO = "lucky_color";
 
     const color = ["🩷", "❤️", "🧡", "💛", "💚", "🩵", "💙", "💜", "🖤", "🩶", "🤍", "🤎"];
     const colorName = ["분홍", "빨강", "주황", "노랑", "초록", "하늘", "파랑", "보라", "검정", "회", "하얀", "갈"];
