@@ -10,21 +10,16 @@ async function makeIssue() {
     const randomColorName = colorName[randomNum];
     let emoji = "";
 
-    if ((randomNum / 20) == 5) {
+    if ((randomNum / 10) == 10 && (randomNum / 10) == 9) {
         emoji = "😍";
-        break;
-    } else if ((randomNum / 20) == 4) {
+    } else if ((randomNum / 10) == 8 && (randomNum / 10) == 7) {
         emoji = "😆";
-        break;
-    } else if ((randomNum / 20) == 3) {
+    } else if ((randomNum / 10) == 6 && (randomNum / 10) == 5) {
         emoji = "😃";
-        break;
-    } else if ((randomNum / 20) == 2) {
+    } else if ((randomNum / 10) == 4 && (randomNum / 10) == 3) {
         emoji = "😉";
-        break;
     } else {
         emoji = "🥹";
-        break;
     }
 
     const response = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/issues`, {
