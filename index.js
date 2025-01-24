@@ -10,13 +10,13 @@ async function makeIssue() {
     const randomColorName = colorName[randomNum];
     let emoji = "";
 
-    if ((randomNum / 10) == 10 && (randomNum / 10) == 9) {
+    if ((randomNum / 10) === 10 || (randomNum / 10) === 9) {
         emoji = "😍";
-    } else if ((randomNum / 10) == 8 && (randomNum / 10) == 7) {
+    } else if ((randomNum / 10) === 8 || (randomNum / 10) === 7) {
         emoji = "😆";
-    } else if ((randomNum / 10) == 6 && (randomNum / 10) == 5) {
+    } else if ((randomNum / 10) === 6 || (randomNum / 10) === 5) {
         emoji = "😃";
-    } else if ((randomNum / 10) == 4 && (randomNum / 10) == 3) {
+    } else if ((randomNum / 10) === 4 || (randomNum / 10) === 3) {
         emoji = "😉";
     } else {
         emoji = "🥹";
