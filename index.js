@@ -8,6 +8,19 @@ async function makeIssue() {
     const randomNum = Math.floor(Math.random() * color.length);
     const randomColor = color[randomNum];
     const randomColorName = colorName[randomNum];
+    let emoji = "";
+
+    if ((randomNum / 20) == 5) {
+        emoji = "😍";
+    } else if ((randomNum / 20) == 4) {
+        emoji = "😆";
+    } else if ((randomNum / 20) == 3) {
+        emoji = "😃";
+    } else if ((randomNum / 20) == 2) {
+        emoji = "😉";
+    } else {
+        emoji = "🥹";
+    }
 
     const response = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/issues`, {
         method: 'POST',
@@ -18,7 +31,7 @@ async function makeIssue() {
             title: "Today's Lucky Score",
             body: `## Today's Lucky Score
 
-오늘 당신의 행운 점수는 ${Math.floor(Math.random() * 100) + 1} 점 입니다!!
+오늘 당신의 행운 점수는 ${Math.floor(Math.random() * 100) + 1} 점 입니다 ${emoji}
             
 오늘의 컬러는 ${randomColorName}색 ${randomColor} 입니다
  ${randomColorName}색 ${randomColor} 아이템을 가지고 다녀보세요! 
