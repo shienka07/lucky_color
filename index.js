@@ -12,14 +12,19 @@ async function makeIssue() {
 
     if ((randomNum / 20) == 5) {
         emoji = "😍";
+        break;
     } else if ((randomNum / 20) == 4) {
         emoji = "😆";
+        break;
     } else if ((randomNum / 20) == 3) {
         emoji = "😃";
+        break;
     } else if ((randomNum / 20) == 2) {
         emoji = "😉";
+        break;
     } else {
         emoji = "🥹";
+        break;
     }
 
     const response = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/issues`, {
