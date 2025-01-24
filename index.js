@@ -8,15 +8,16 @@ async function makeIssue() {
     const randomNum = Math.floor(Math.random() * color.length);
     const randomColor = color[randomNum];
     const randomColorName = colorName[randomNum];
+    const score = Math.floor(Math.random() * 100) + 1;
     let emoji = "";
-
-    if ((randomNum / 10) === 10 || (randomNum / 10) === 9) {
+    
+    if (score >= 90) {
         emoji = "😍";
-    } else if ((randomNum / 10) === 8 || (randomNum / 10) === 7) {
+    } else if (score >= 70) {
         emoji = "😆";
-    } else if ((randomNum / 10) === 6 || (randomNum / 10) === 5) {
+    } else if (score >= 50) {
         emoji = "😃";
-    } else if ((randomNum / 10) === 4 || (randomNum / 10) === 3) {
+    } else if (score >= 30) {
         emoji = "😉";
     } else {
         emoji = "🥹";
@@ -31,7 +32,7 @@ async function makeIssue() {
             title: "Today's Lucky Score",
             body: `## Today's Lucky Score
 
-오늘 당신의 행운 점수는 ${Math.floor(Math.random() * 100) + 1} 점 입니다 ${emoji}
+오늘 당신의 행운 점수는 ${score}점 입니다 ${emoji}
             
 오늘의 컬러는 ${randomColorName}색 ${randomColor} 입니다
  ${randomColorName}색 ${randomColor} 아이템을 가지고 다녀보세요! 
