@@ -18,12 +18,11 @@ async function makeIssue() {
             title: "Today's Lucky Score",
             body: `## Today's Lucky Score
 
-
-            오늘 당신의 행운 점수는 ${Math.floor(Math.random() * 100) + 1} 점 입니다!!
+오늘 당신의 행운 점수는 ${Math.floor(Math.random() * 100) + 1} 점 입니다!!
             
-            오늘의 컬러는 ${randomColorName}색 입니다
-            ${randomColor} ${randomColorName}색 아이템을 가지고 다녀보세요! 오늘 하루 행운이 가득할 거예요
-            ### ${randomColor}`
+오늘의 컬러는 ${randomColorName}색 입니다
+${randomColor} ${randomColorName}색 아이템을 가지고 다녀보세요! 
+오늘 하루 행운이 가득할 거예요`,
         })
     });
     if (response.ok) {
