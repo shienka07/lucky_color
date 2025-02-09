@@ -23,27 +23,27 @@ async function makeIssue() {
         emoji = "🥹";
     }
 
-    const response = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/issues`, {
-        method: 'POST',
-        headers: {
-            Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-            title: "Today's Lucky Score",
-            body: `## Today's Lucky Score
+    // const response = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/issues`, {
+    //     method: 'POST',
+    //     headers: {
+    //         Authorization: `Bearer ${token}`,
+    //     },
+    //     body: JSON.stringify({
+    //         title: "Today's Lucky Score",
+    //         body: `## Today's Lucky Score
 
-오늘 당신의 행운 점수는 ${score}점 입니다 ${emoji}
+    //         오늘 당신의 행운 점수는 ${score}점 입니다 ${emoji}
             
-오늘의 컬러는 ${randomColorName}색 ${randomColor} 입니다
- ${randomColorName}색 ${randomColor} 아이템을 가지고 다녀보세요! 
-오늘 하루 행운이 가득할 거예요 ${randomColor}`,
-        })
-    });
-    if (response.ok) {
-        console.log("성공");
-    } else {
-        console.log("실패");
-    }
+    //         오늘의 컬러는 ${randomColorName}색 ${randomColor} 입니다
+    //         ${randomColorName}색 ${randomColor} 아이템을 가지고 다녀보세요! 
+    //         오늘 하루 행운이 가득할 거예요 ${randomColor}`,
+    //     })
+    // });
+    // if (response.ok) {
+    //     console.log("성공");
+    // } else {
+    //     console.log("실패");
+    // }
 }
 
 makeIssue();
